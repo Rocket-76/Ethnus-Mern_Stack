@@ -8,6 +8,6 @@ div.t1::before{
     display: inline-block;
     height: 20px;
     width: 20px;
-    background-image: url("../../../img/logo.jpeg");
+    background-image: url("../../img/logo.jpeg");
     background-size: contain;
 }
