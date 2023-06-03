@@ -2,15 +2,25 @@
 <html>
 <head>
   <title>Alphabetical Order</title>
-  <script src="index.js"></script>
 </head>
 <body>
   <h1>Alphabetical Order</h1>
-  <form id="sortForm">
-    <label for="input">Enter a string: </label>
-    <input type="text" id="input" />
-    <button type="submit">Sort</button>
-  </form>
-  <div id="output"></div>
+  <label for="input">Enter a string:</label>
+  <input type="text" id="input" />
+  <button onclick="displaySortedString()">Sort</button>
+  <p id="output"></p>
+
+  <script>
+    function displaySortedString() {
+      // Get the input value from the user
+      const input = document.getElementById('input').value;
+
+      // Sort the characters in alphabetical order
+      const sortedString = input.split('').sort().join('');
+
+      // Display the sorted string
+      document.getElementById('output').textContent = sortedString;
+    }
+  </script>
 </body>
 </html>
