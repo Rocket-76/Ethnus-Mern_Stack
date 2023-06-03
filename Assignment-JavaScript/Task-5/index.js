@@ -1,3 +1,4 @@
+//Redundant
 // Function to reverse the input
 function reverseInput(event) {
   event.preventDefault(); // Prevent form submission from refreshing the page
