@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Alphabetical Order</title>
-</head>
 <body>
-  <h1>Alphabetical Order</h1>
-  <label for="input">Enter a string:</label>
-  <input type="text" id="input" />
-  <button onclick="displaySortedString()">Sort</button>
-  <p id="output"></p>
+<center>
+<h1>Alphabetical Order</h1>
 
-  <script>
-    function displaySortedString() {
-      // Get the input value from the user
-      const input = document.getElementById('input').value;
+<h1><input type="text" id="typeInput" style="height: 20px;width: 100px;"></h1>
+<button  style="height: 25px;width: 50px;" onclick="press()">Convert</button>
 
-      // Sort the characters in alphabetical order
-      const sortedString = input.split('').sort().join('');
+<h1>Expected Ouput: </h1>
+<h1 id="answer"></h1>
 
-      // Display the sorted string
-      document.getElementById('output').innerHTML = sortedString;
-    }
-  </script>
+</center>
+
+
+
+<script>
+
+
+function press(){
+    
+    let a=document.getElementById('typeInput').value;
+function sortString(a){
+//   var arr = a.split('');
+//   var sorted = arr.sort();
+//   return sorted.join('');
+  return a.split('').sort().join('');
+}
+    document.getElementById("answer").innerHTML =sortString(a);
+}
+
+
+
+</script>
+
 </body>
 </html>
