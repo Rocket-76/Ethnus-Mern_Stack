@@ -1,3 +1,4 @@
+//Redundant here
 // Function to sort the letters in alphabetical order
 function sortLetters(event) {
   event.preventDefault(); // Prevent form submission from refreshing the page
