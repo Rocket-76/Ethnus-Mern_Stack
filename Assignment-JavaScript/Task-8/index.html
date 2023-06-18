@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Move Image Example</title>
   <style>
-    #movingImage {
+    .train{
       position: relative;
       left: 0;
       top: 0;
@@ -17,9 +17,8 @@
   </style>
 </head>
 <body>
-  <div id="movingImageContainer">
-    <div class="img"><img src="../../img/Screenshot (1516).png" alt="profile img"></div>
-  </div>
+  <img class = "train" src="../../img/Screenshot (1516).png" alt="profile img">
+  
 
   <div class="buttons-container">
     <button id="startBtn">Start</button>
@@ -32,14 +31,16 @@
 
     var startBtn = document.getElementById("startBtn");
     var stopBtn = document.getElementById("stopBtn");
-    var movingImage = document.getElementById("movingImage");
+    var moveTrain = document.getElementsByClassName("train")[0];
+  
 
     startBtn.addEventListener("click", function() {
       clearInterval(intervalId); // Clear any previous interval
+      
 
       intervalId = setInterval(function() {
-        var currentLeft = parseInt(movingImage.style.left) || 0;
-        movingImage.style.left = currentLeft + moveDistance + "px";
+        var currentLeft = parseInt(moveTrain.style.left) || 0;
+        moveTrain.style.left = currentLeft + moveDistance + "px";
       }, 100);
     });
 
